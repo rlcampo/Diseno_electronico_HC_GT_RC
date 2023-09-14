@@ -42,7 +42,7 @@ def udp_server(port):
                 connection.close()
 
 if __name__ == "__main__":
-    port = int(input("Enter the port number to listen on: "))
+    port = 25000
     udp_thread = threading.Thread(target=udp_server, args=(port,))
     udp_thread.start()
     udp_thread.join()
